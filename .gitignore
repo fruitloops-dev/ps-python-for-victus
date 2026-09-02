@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool caches and reports
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+htmlcov/
+
+# Local judge input/output
+/input.txt
+/output.txt
+*.prob
+.cph/
+
+# Editors and OS files
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.log

@@ -1,0 +1,84 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python: 현재 파일 실행 (input.txt)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": [
+        "${workspaceFolder}\\tools\\run_with_input.py",
+        "${file}",
+        "${workspaceFolder}\\input.txt"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "clear": true,
+        "echo": true,
+        "focus": true,
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Python: 현재 파일 실행 (직접 입력)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["${file}"],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "presentation": {
+        "clear": true,
+        "echo": true,
+        "focus": true,
+        "panel": "dedicated",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Ruff: 검사",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "ruff", "check", "."],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Ruff: 포맷 검사",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "ruff", "format", "--check", "."],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Pytest: 전체 실행",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pytest"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check: 전체",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Ruff: 검사", "Ruff: 포맷 검사", "Pytest: 전체 실행"],
+      "problemMatcher": []
+    }
+  ]
+}
