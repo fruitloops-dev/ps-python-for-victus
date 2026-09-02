@@ -2,20 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Python: 현재 파일 디버그 (직접 입력)",
+      "name": "Python: 현재 파일 디버그",
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
-      "console": "integratedTerminal",
-      "cwd": "${fileDirname}",
-      "justMyCode": true
-    },
-    {
-      "name": "Python: 현재 파일 디버그 (input.txt)",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}\\tools\\run_with_input.py",
-      "args": ["${file}", "${workspaceFolder}\\input.txt"],
       "console": "integratedTerminal",
       "cwd": "${fileDirname}",
       "justMyCode": true

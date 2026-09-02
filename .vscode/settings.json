@@ -2,12 +2,11 @@
   "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
   "python.terminal.activateEnvironment": true,
   "python.terminal.executeInFileDir": true,
+  "python.terminal.focusAfterLaunch": true,
   "python.analysis.typeCheckingMode": "basic",
   "python.analysis.diagnosticMode": "openFilesOnly",
-  "python.analysis.exclude": ["**/.venv/**", "**/.cph/**"],
-  "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": ["tests"],
-  "python.testing.cwd": "${workspaceFolder}",
+  "python.analysis.exclude": ["**/.venv/**"],
+  "python.testing.pytestEnabled": false,
   "python.testing.unittestEnabled": false,
   "ruff.importStrategy": "fromEnvironment",
   "ruff.configurationPreference": "filesystemFirst",
@@ -23,8 +22,7 @@
     "**/.venv/**": true
   },
   "search.exclude": {
-    "**/.venv": true,
-    "**/.cph": true
+    "**/.venv": true
   },
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -37,15 +35,5 @@
     "editor.tabSize": 4,
     "editor.rulers": [100]
   },
-  "cph.general.defaultLanguage": "python",
-  "cph.general.menuChoices": "python",
-  "cph.general.includeProblemIndex": true,
-  "cph.general.timeOut": 5000,
-  "cph.language.python.Command": "C:\\dev\\ps-python-for-victus\\.venv\\Scripts\\python.exe",
-  "cph.general.defaultLanguageTemplateFileLocation": "C:\\dev\\ps-python-for-victus\\templates\\solution.py",
-  "code-runner.executorMap": {
-    "python": "\"$pythonPath\" -u \"$fullFileName\""
-  },
-  "code-runner.fileDirectoryAsCwd": true,
-  "code-runner.runInTerminal": true
+  "code-runner.showRunIconInEditorTitleMenu": false
 }
