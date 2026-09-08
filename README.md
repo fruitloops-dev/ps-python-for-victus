@@ -19,6 +19,17 @@ before: [5, 2, 4, 1, 3]
 after: [1, 2, 3, 4, 5]
 ```
 
+## Jupyter Notebook (`.ipynb`)
+
+노트북 파일을 열고 오른쪽 위 `Select Kernel`에서 `Python Environments` → 이 프로젝트의
+`.venv`를 선택합니다. 그다음 각 셀의 `▶` 버튼이나 `Shift+Enter`로 셀을 실행합니다.
+
+- `Shift+Enter`: 현재 셀을 실행하고 다음 셀로 이동
+- `Ctrl+Enter`: 현재 셀만 실행
+- 위쪽 `Run All`: 모든 셀을 처음부터 순서대로 실행
+
+커널은 노트북별로 한 번 선택하면 다음에 다시 열 때도 기억됩니다.
+
 ## 새 연습 파일
 
 수업 주차나 주제에 맞게 자유롭게 파일을 만들면 됩니다.

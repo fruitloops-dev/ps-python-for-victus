@@ -1,1 +1,2 @@
+ipykernel==7.3.0
 ruff==0.16.5
