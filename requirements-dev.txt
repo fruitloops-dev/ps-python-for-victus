@@ -1,2 +1,4 @@
 ipykernel==7.3.0
+matplotlib==3.11.1
+numpy==2.5.3
 ruff==0.16.5
